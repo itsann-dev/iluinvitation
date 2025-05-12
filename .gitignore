@@ -21,7 +21,10 @@
 /build
 
 # misc
+*.log
 .DS_Store
+.vercel
+*.tsbuildinfo
 *.pem
 .vscode/
 

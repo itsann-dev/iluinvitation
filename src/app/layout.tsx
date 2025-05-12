@@ -2,6 +2,7 @@
 import "./globals.css";
 import { Poppins } from "next/font/google";
 import type { Metadata } from "next";
+import { Toaster } from "react-hot-toast";
 
 const poppins = Poppins({
   subsets: ["latin"],
@@ -25,7 +26,23 @@ export default function RootLayout({
         className={`${poppins.className} bg-white text-gray-800 relative overflow-x-hidden`}
       >
         {children}
+        <Toaster position="top-center" />
       </body>
     </html>
   );
 }
+
+// export default function RootLayout({
+//   children,
+// }: {
+//   children: React.ReactNode;
+// }) {
+//   return (
+//     <html lang="id">
+//       <body>
+//         {children}
+//         <Toaster position="top-center" />
+//       </body>
+//     </html>
+//   );
+// }
