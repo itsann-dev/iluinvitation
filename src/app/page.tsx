@@ -5,6 +5,7 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 import { Palette, Smartphone, Smile, BookOpenCheck } from "lucide-react";
 import Image from "next/image";
+import Link from "next/link";
 
 export default function Home() {
   useEffect(() => {
@@ -21,12 +22,12 @@ export default function Home() {
             <a href="#template" className="hover:text-purple-500">
               Template
             </a>
-            <a
-              href="#buat"
+            <Link
+              href="/login"
               className="inline-block bg-gradient-to-r from-purple-500 to-purple-700 text-white px-6 py-3 rounded-full shadow hover:from-purple-600 hover:to-purple-800 transition"
             >
               Masuk
-            </a>
+            </Link>
           </nav>
         </div>
       </header>
@@ -40,12 +41,12 @@ export default function Home() {
           <p className="text-lg text-gray-600 mb-6">
             Satu link untuk momen istimewa.
           </p>
-          <a
-            href="#template"
+          <Link
+            href="/login"
             className="inline-block bg-gradient-to-r from-purple-500 to-purple-700 text-white px-6 py-3 rounded-full shadow hover:from-purple-600 hover:to-purple-800 transition"
           >
             Coba Sekarang
-          </a>
+          </Link>
         </div>
       </section>
 
@@ -73,12 +74,12 @@ export default function Home() {
             >
               Preview
             </a>
-            <a
-              href="#buat"
-              className="px-5 py-2 rounded-full bg-gradient-to-r from-purple-500 to-purple-700 text-white hover:from-purple-600 hover:to-purple-800 transition shadow"
+            <Link
+              href="/login"
+              className="inline-block bg-gradient-to-r from-purple-500 to-purple-700 text-white px-6 py-3 rounded-full shadow hover:from-purple-600 hover:to-purple-800 transition"
             >
               Gunakan
-            </a>
+            </Link>
           </div>
         </div>
       </section>
