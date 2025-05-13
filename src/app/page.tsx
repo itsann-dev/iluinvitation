@@ -70,7 +70,7 @@ export default function Home() {
             <a
               href="/templates/wedding-uus/index.html?kpd=Preview"
               target="_blank"
-              className="px-5 py-2 rounded-full bg-white border border-purple-500 text-purple-600 hover:bg-purple-100 transition shadow"
+              className="px-5 py-3 rounded-full bg-white border border-purple-500 text-purple-600 hover:bg-purple-100 transition shadow"
             >
               Preview
             </a>
