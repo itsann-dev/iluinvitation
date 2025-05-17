@@ -7,7 +7,7 @@ import { usePathname } from "next/navigation";
 import { Menu, X, LayoutDashboard, Mail, LogOut } from "lucide-react";
 import AOS from "aos";
 import "aos/dist/aos.css";
-import { supabase } from "@/lib/supabaseClient"; // ✅ Benar
+import { supabase } from "@/lib/supabaseClient";
 import toast from "react-hot-toast";
 import { User } from "@supabase/supabase-js";
 
