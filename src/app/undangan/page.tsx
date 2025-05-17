@@ -24,11 +24,14 @@ export default function UndanganPage() {
     <div className="bg-white flex justify-center items-center relative">
       {!opened ? (
         <div className="w-[440px] max-w-full min-h-screen overflow-hidden shadow-lg">
-          <InvitationCover nama={namaTamu} onOpen={() => setOpened(true)} />
+          <InvitationCover
+            guestName={namaTamu}
+            onOpen={() => setOpened(true)}
+          />
         </div>
       ) : (
         <div className="w-[440px] max-w-full min-h-screen shadow-lg">
-          <InvitationContent nama={namaTamu} />
+          <InvitationContent />
         </div>
       )}
     </div>

@@ -4,6 +4,10 @@ import CountdownTimer from "../components/CountdownTimer";
 import NavLinks from "../components/Navlinks";
 import Image from "next/image";
 
+// type InvitationContentProps = {
+//   guestName: string;
+// };
+
 export default function InvitationContent() {
   return (
     <div className="w-full">
