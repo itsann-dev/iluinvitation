@@ -1,6 +1,7 @@
 "use client";
 
 import CountdownTimer from "../components/CountdownTimer";
+import NavLinks from "../components/Navlinks";
 import Image from "next/image";
 
 export default function InvitationContent() {
@@ -8,6 +9,7 @@ export default function InvitationContent() {
     <div className="w-full">
       {/* Section 1 */}
       <section
+        id="home"
         className="min-h-screen relative w-full bg-cover bg-center"
         style={{ backgroundImage: "url(/assets/images/bg.jpg)" }}
       >
@@ -68,6 +70,7 @@ export default function InvitationContent() {
 
       {/* Section 2 */}
       <section
+        id="couple"
         className="relative w-full bg-cover bg-center"
         style={{ backgroundImage: "url(/assets/images/bg.jpg)" }}
       >
@@ -83,7 +86,7 @@ export default function InvitationContent() {
         </p>
       </section>
 
-      {/* Tambah section sesuai kebutuhan */}
+      <NavLinks />
     </div>
   );
 }
