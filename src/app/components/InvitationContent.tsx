@@ -1,26 +1,23 @@
 "use client";
 
 import CountdownTimer from "../components/CountdownTimer";
+import Image from "next/image";
 
-type InvitationContentProps = {
-  guestName: string;
-};
-
-export default function InvitationContent({
-  guestName,
-}: InvitationContentProps) {
+export default function InvitationContent() {
   return (
     <div className="w-full">
       {/* Section 1 */}
       <section
-        className="relative w-full bg-cover bg-center"
+        className="min-h-screen relative w-full bg-cover bg-center"
         style={{ backgroundImage: "url(/assets/images/bg.jpg)" }}
       >
         <LeafDecoration />
         <div className="max-w-80 mx-auto py-16 text-center items-center text-white">
-          <img
+          <Image
             className="my-3 w-1/2 mx-auto"
             src="/assets/images/fd.png"
+            width={300}
+            height={300}
             alt="Foto uus dan calon"
             data-aos="zoom-in"
           />
@@ -51,11 +48,20 @@ export default function InvitationContent({
             <CountdownTimer targetDate="2025-06-15T08:00:00" />
           </div>
 
-          {/* Panah scroll ke bawah */}
-          <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 z-20 flex flex-col items-center gap-1 animate-bounce">
-            <span className="w-3 h-3 border-b-2 border-r-2 border-white rotate-45"></span>
-            <span className="w-3 h-3 border-b-2 border-r-2 border-white rotate-45 delay-100"></span>
-            <span className="w-3 h-3 border-b-2 border-r-2 border-white rotate-45 delay-200"></span>
+          <div
+            className="absolute bottom-4 left-1/2 transform -translate-x-1/2 z-20"
+            data-aos="fade-up"
+            data-aos-delay="500"
+          >
+            <svg
+              className="w-6 h-6 text-white animate-scroll-down"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="2"
+              viewBox="0 0 24 24"
+            >
+              <path d="M19 9l-7 7-7-7" />
+            </svg>
           </div>
         </div>
       </section>
@@ -63,13 +69,18 @@ export default function InvitationContent({
       {/* Section 2 */}
       <section
         className="relative w-full bg-cover bg-center"
-        style={{ backgroundImage: "url(/assets/images/bg2.jpg)" }}
+        style={{ backgroundImage: "url(/assets/images/bg.jpg)" }}
       >
         <LeafDecoration />
         <div className="max-w-md mx-auto py-16 text-center text-white">
           <h2 className="text-2xl font-bold font-quicksand">Firdaus & Ani</h2>
           <p className="mt-2">Akan melangsungkan pernikahan...</p>
         </div>
+        <p className="my-3 font-quicksand text-xs text-gray-500">
+          وَمِنْ اٰيٰتِهٖٓ اَنْ خَلَقَ لَكُمْ مِّنْ اَنْفُسِكُمْ اَزْوَاجًا
+          لِّتَسْكُنُوْٓا اِلَيْهَا وَجَعَلَ بَيْنَكُمْ مَّوَدَّةً وَّرَحْمَةًۗ
+          اِنَّ فِيْ ذٰلِكَ لَاٰيٰتٍ لِّقَوْمٍ يَّتَفَكَّرُوْنَ
+        </p>
       </section>
 
       {/* Tambah section sesuai kebutuhan */}
@@ -81,25 +92,33 @@ export default function InvitationContent({
 function LeafDecoration() {
   return (
     <>
-      <img
+      <Image
         src="/assets/images/dp.png"
         alt="daun kiri atas"
-        className="absolute top-0 left-0 w-24 scale-x-[-1] animate-float"
+        width={100}
+        height={100}
+        className="absolute top-0 left-0 w-40 scale-x-[-1] animate-float"
       />
-      <img
+      <Image
         src="/assets/images/dp.png"
         alt="daun kanan atas"
-        className="absolute top-0 right-0 w-24 animate-float"
+        width={100}
+        height={100}
+        className="absolute top-0 right-0 w-40 animate-float"
       />
-      <img
+      <Image
         src="/assets/images/dp.png"
         alt="daun kiri bawah"
-        className="absolute bottom-0 left-0 w-24 rotate-180 animate-float"
+        width={100}
+        height={100}
+        className="absolute bottom-0 left-0 w-40 rotate-180 animate-float"
       />
-      <img
+      <Image
         src="/assets/images/dp.png"
         alt="daun kanan bawah"
-        className="absolute bottom-0 right-0 w-24 scale-y-[-1] animate-float"
+        width={100}
+        height={100}
+        className="absolute bottom-0 right-0 w-40 scale-y-[-1] animate-float"
       />
     </>
   );

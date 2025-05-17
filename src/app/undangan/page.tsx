@@ -4,6 +4,7 @@ import { useState, useEffect } from "react";
 import { useSearchParams } from "next/navigation";
 import InvitationCover from "../components/InvitationCover";
 import InvitationContent from "../components/InvitationContent";
+
 import AOS from "aos";
 import "aos/dist/aos.css";
 
@@ -20,14 +21,16 @@ export default function UndanganPage() {
   const namaTamu = searchParams.get("kpd") || "Tamu Undangan";
 
   return (
-    <div className="w-full min-h-screen bg-white flex justify-center items-center overflow-hidden relative">
-      <div className="w-[440px] max-w-full h-screen overflow-hidden shadow-lg bg-white">
-        {!opened ? (
+    <div className="bg-white flex justify-center items-center relative">
+      {!opened ? (
+        <div className="w-[440px] max-w-full min-h-screen overflow-hidden shadow-lg">
           <InvitationCover nama={namaTamu} onOpen={() => setOpened(true)} />
-        ) : (
+        </div>
+      ) : (
+        <div className="w-[440px] max-w-full min-h-screen shadow-lg">
           <InvitationContent nama={namaTamu} />
-        )}
-      </div>
+        </div>
+      )}
     </div>
   );
 }

@@ -34,27 +34,23 @@
   animation: float 3s ease-in-out infinite;
 }
 
-@keyframes bounceDelayed {
-  0%,
-  100% {
+@keyframes scrollDown {
+  0% {
+    opacity: 0.2;
     transform: translateY(0);
   }
   50% {
+    opacity: 1;
     transform: translateY(8px);
+  }
+  100% {
+    opacity: 0.2;
+    transform: translateY(0);
   }
 }
 
-.bounce-delay-0 {
-  animation: bounceDelayed 1.5s infinite;
-  animation-delay: 0s;
-}
-.bounce-delay-1 {
-  animation: bounceDelayed 1.5s infinite;
-  animation-delay: 0.2s;
-}
-.bounce-delay-2 {
-  animation: bounceDelayed 1.5s infinite;
-  animation-delay: 0.4s;
+.animate-scroll-down {
+  animation: scrollDown 1.5s infinite;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -68,4 +64,8 @@ body {
   background: var(--background);
   color: var(--foreground);
   font-family: Quicksand, Great-Vibes;
+}
+
+html {
+  scroll-behavior: smooth;
 }

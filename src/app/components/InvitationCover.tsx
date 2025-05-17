@@ -1,5 +1,7 @@
 "use client";
 
+import Image from "next/image";
+
 type InvitationCoverProps = {
   guestName: string;
   onOpen: () => void;
@@ -18,27 +20,36 @@ export default function InvitationCover({
       }}
     >
       {/* Daun-daun dekorasi */}
-      <img
+
+      <Image
         src="/assets/images/dp.png"
         alt="daun kiri atas"
+        width={100}
+        height={100}
         className="absolute top-0 left-0 w-40 scale-x-[-1] animate-float"
         data-aos="fade-down-right"
       />
-      <img
+      <Image
         src="/assets/images/dp.png"
         alt="daun kanan atas"
+        width={100}
+        height={100}
         className="absolute top-0 right-0 w-40 animate-float"
         data-aos="fade-down-left"
       />
-      <img
+      <Image
         src="/assets/images/dp.png"
         alt="daun kiri bawah"
+        width={100}
+        height={100}
         className="absolute bottom-0 left-0 w-40 rotate-180 animate-float"
         data-aos="fade-up-right"
       />
-      <img
+      <Image
         src="/assets/images/dp.png"
         alt="daun kanan bawah"
+        width={100}
+        height={100}
         className="absolute bottom-0 right-0 w-40 scale-y-[-1] animate-float"
         data-aos="fade-up-left"
       />
@@ -48,9 +59,11 @@ export default function InvitationCover({
         <h2 className="text-gray-900 font-quicksand" data-aos="fade-up">
           WE INVITE YOU
         </h2>
-        <img
+        <Image
           className="my-3 w-1/2 mx-auto"
           src="/assets/images/fd.png"
+          width={300}
+          height={300}
           alt="Foto uus dan calon"
           data-aos="zoom-in"
         />
