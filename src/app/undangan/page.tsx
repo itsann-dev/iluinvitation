@@ -1,7 +1,6 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import { useSearchParams } from "next/navigation";
 import InvitationCover from "../components/InvitationCover";
 import InvitationContent from "../components/InvitationContent";
 
@@ -17,17 +16,14 @@ export default function UndanganPage() {
   }, []);
 
   const [opened, setOpened] = useState(false);
-  const searchParams = useSearchParams();
-  const namaTamu = searchParams.get("kpd") || "Tamu Undangan";
+  // const searchParams = useSearchParams();
+  // const namaTamu = searchParams.get("kpd") || "Tamu Undangan";
 
   return (
     <div className="bg-white flex justify-center items-center relative">
       {!opened ? (
         <div className="w-[440px] max-w-full min-h-screen overflow-hidden shadow-lg">
-          <InvitationCover
-            guestName={namaTamu}
-            onOpen={() => setOpened(true)}
-          />
+          <InvitationCover onOpen={() => setOpened(true)} />
         </div>
       ) : (
         <div className="w-[440px] max-w-full min-h-screen shadow-lg">

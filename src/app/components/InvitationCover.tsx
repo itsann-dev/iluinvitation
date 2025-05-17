@@ -3,14 +3,11 @@
 import Image from "next/image";
 
 type InvitationCoverProps = {
-  guestName: string;
+  // guestName: string;
   onOpen: () => void;
 };
 
-export default function InvitationCover({
-  guestName,
-  onOpen,
-}: InvitationCoverProps) {
+export default function InvitationCover({ onOpen }: InvitationCoverProps) {
   return (
     <div
       onClick={onOpen}
@@ -83,7 +80,7 @@ export default function InvitationCover({
         <p className="text-sm mb-2 text-gray-900 font-quicksand font-semibold">
           Kepada Yth.
         </p>
-        <h1 className="text-2xl font-bold mb-4">{guestName}</h1>
+        <h1 className="text-2xl font-bold mb-4">Annas</h1>
 
         {/* Tombol tidak perlu onClick lagi, tapi tetap bisa ada */}
         <button className="bg-brown text-xs px-2 py-2 rounded shadow-lg hover:bg-brown-hover transition">
