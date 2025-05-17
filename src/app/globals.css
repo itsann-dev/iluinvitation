@@ -26,12 +26,35 @@
     transform: translateY(0);
   }
   50% {
-    transform: translateY(-10px);
+    transform: translateY(-5px);
   }
 }
 
 .animate-float {
   animation: float 3s ease-in-out infinite;
+}
+
+@keyframes bounceDelayed {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(8px);
+  }
+}
+
+.bounce-delay-0 {
+  animation: bounceDelayed 1.5s infinite;
+  animation-delay: 0s;
+}
+.bounce-delay-1 {
+  animation: bounceDelayed 1.5s infinite;
+  animation-delay: 0.2s;
+}
+.bounce-delay-2 {
+  animation: bounceDelayed 1.5s infinite;
+  animation-delay: 0.4s;
 }
 
 @media (prefers-color-scheme: dark) {

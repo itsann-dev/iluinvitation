@@ -11,12 +11,13 @@ export default function InvitationCover({
 }: InvitationCoverProps) {
   return (
     <div
-      className="w-full min-h-screen flex items-center justify-center bg-cover bg-center relative"
+      onClick={onOpen}
+      className="w-full min-h-screen flex items-center justify-center bg-cover bg-center relative cursor-pointer"
       style={{
         backgroundImage: "url(/assets/images/bg.jpg)",
       }}
     >
-      {/* Daun pojok (hanya daun yang bergerak) */}
+      {/* Daun-daun dekorasi */}
       <img
         src="/assets/images/dp.png"
         alt="daun kiri atas"
@@ -42,9 +43,9 @@ export default function InvitationCover({
         data-aos="fade-up-left"
       />
 
-      {/* Konten utama (tidak bergerak) */}
+      {/* Konten undangan */}
       <div className="relative z-10 text-white place-items-center text-center px-6">
-        <h2 className="text-gray-900 font-quicksand" data-aos="fade-down">
+        <h2 className="text-gray-900 font-quicksand" data-aos="fade-up">
           WE INVITE YOU
         </h2>
         <img
@@ -66,18 +67,13 @@ export default function InvitationCover({
           Tanpa mengurangi rasa hormat, Kami mengundang Bapak/Ibu/Saudara/i
           untuk hadir di acara kami.
         </p>
-        <p
-          className="text-sm mb-2 text-gray-900 font-quicksand font-semibold"
-          data-aos="fade-up"
-        >
+        <p className="text-sm mb-2 text-gray-900 font-quicksand font-semibold">
           Kepada Yth.
         </p>
         <h1 className="text-2xl font-bold mb-4">{guestName}</h1>
-        <button
-          onClick={onOpen}
-          className="bg-brown text-xs px-2 py-2 rounded shadow-lg hover:bg-brown-hover transition"
-          data-aos="fade-up"
-        >
+
+        {/* Tombol tidak perlu onClick lagi, tapi tetap bisa ada */}
+        <button className="bg-brown text-xs px-2 py-2 rounded shadow-lg hover:bg-brown-hover transition">
           Buka Undangan
         </button>
       </div>

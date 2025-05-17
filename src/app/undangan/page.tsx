@@ -3,15 +3,15 @@
 import { useState, useEffect } from "react";
 import { useSearchParams } from "next/navigation";
 import InvitationCover from "../components/InvitationCover";
-// import InvitationContent from "@/components/InvitationContent";
+import InvitationContent from "../components/InvitationContent";
 import AOS from "aos";
 import "aos/dist/aos.css";
 
 export default function UndanganPage() {
   useEffect(() => {
     AOS.init({
-      duration: 1000, // Durasi animasi (ms)
-      once: true, // Hanya animasi sekali saat pertama load
+      duration: 1000,
+      once: true,
     });
   }, []);
 

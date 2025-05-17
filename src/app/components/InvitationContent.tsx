@@ -1,0 +1,106 @@
+"use client";
+
+import CountdownTimer from "../components/CountdownTimer";
+
+type InvitationContentProps = {
+  guestName: string;
+};
+
+export default function InvitationContent({
+  guestName,
+}: InvitationContentProps) {
+  return (
+    <div className="w-full">
+      {/* Section 1 */}
+      <section
+        className="relative w-full bg-cover bg-center"
+        style={{ backgroundImage: "url(/assets/images/bg.jpg)" }}
+      >
+        <LeafDecoration />
+        <div className="max-w-80 mx-auto py-16 text-center items-center text-white">
+          <img
+            className="my-3 w-1/2 mx-auto"
+            src="/assets/images/fd.png"
+            alt="Foto uus dan calon"
+            data-aos="zoom-in"
+          />
+          <h2 className="text-3xl mb-2 font-great-vibes text-brown">
+            The Wedding of Firdaus & Ani
+          </h2>
+          <p className="my-3 font-quicksand text-xs text-gray-500">
+            وَمِنْ اٰيٰتِهٖٓ اَنْ خَلَقَ لَكُمْ مِّنْ اَنْفُسِكُمْ اَزْوَاجًا
+            لِّتَسْكُنُوْٓا اِلَيْهَا وَجَعَلَ بَيْنَكُمْ مَّوَدَّةً
+            وَّرَحْمَةًۗ اِنَّ فِيْ ذٰلِكَ لَاٰيٰتٍ لِّقَوْمٍ يَّتَفَكَّرُوْنَ
+          </p>
+
+          <p className="my-3 font-quicksand text-xs text-gray-500">
+            Di antara tanda-tanda (kebesaran)-Nya ialah bahwa Dia menciptakan
+            pasangan-pasangan untukmu dari (jenis) dirimu sendiri agar kamu
+            merasa tenteram kepadanya. Dia menjadikan di antaramu rasa cinta dan
+            kasih sayang. Sesungguhnya pada yang demikian itu benar-benar
+            terdapat tanda-tanda (kebesaran Allah) bagi kaum yang berpikir.
+          </p>
+
+          <p className="my-3 font-quicksand text-xs font-bold text-gray-800">
+            - Ar-Rum · Ayat 21 -
+          </p>
+          <div className="max-w-md mx-auto py-10 text-center text-brown">
+            <h2 className="text-sm font-bold font-quicksand">
+              Menuju Hari Bahagia
+            </h2>
+            <CountdownTimer targetDate="2025-06-15T08:00:00" />
+          </div>
+
+          {/* Panah scroll ke bawah */}
+          <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 z-20 flex flex-col items-center gap-1 animate-bounce">
+            <span className="w-3 h-3 border-b-2 border-r-2 border-white rotate-45"></span>
+            <span className="w-3 h-3 border-b-2 border-r-2 border-white rotate-45 delay-100"></span>
+            <span className="w-3 h-3 border-b-2 border-r-2 border-white rotate-45 delay-200"></span>
+          </div>
+        </div>
+      </section>
+
+      {/* Section 2 */}
+      <section
+        className="relative w-full bg-cover bg-center"
+        style={{ backgroundImage: "url(/assets/images/bg2.jpg)" }}
+      >
+        <LeafDecoration />
+        <div className="max-w-md mx-auto py-16 text-center text-white">
+          <h2 className="text-2xl font-bold font-quicksand">Firdaus & Ani</h2>
+          <p className="mt-2">Akan melangsungkan pernikahan...</p>
+        </div>
+      </section>
+
+      {/* Tambah section sesuai kebutuhan */}
+    </div>
+  );
+}
+
+// Komponen daun hiasan
+function LeafDecoration() {
+  return (
+    <>
+      <img
+        src="/assets/images/dp.png"
+        alt="daun kiri atas"
+        className="absolute top-0 left-0 w-24 scale-x-[-1] animate-float"
+      />
+      <img
+        src="/assets/images/dp.png"
+        alt="daun kanan atas"
+        className="absolute top-0 right-0 w-24 animate-float"
+      />
+      <img
+        src="/assets/images/dp.png"
+        alt="daun kiri bawah"
+        className="absolute bottom-0 left-0 w-24 rotate-180 animate-float"
+      />
+      <img
+        src="/assets/images/dp.png"
+        alt="daun kanan bawah"
+        className="absolute bottom-0 right-0 w-24 scale-y-[-1] animate-float"
+      />
+    </>
+  );
+}
