@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, useEffect, useRef } from "react";
-import { useSearchParams } from "next/navigation";
+// import { useSearchParams } from "next/navigation";
 import InvitationCover from "../components/InvitationCover";
 import InvitationContent from "../components/InvitationContent";
 import NavLinks from "../components/Navlinks";
@@ -13,10 +13,17 @@ export default function UndanganPage() {
   const [playing, setPlaying] = useState(false);
   const audioRef = useRef<HTMLAudioElement | null>(null);
 
-  const searchParams = useSearchParams();
-  const namaTamu = decodeURIComponent(
-    searchParams.get("kpd") || "Tamu Undangan"
-  );
+  // const searchParams = useSearchParams();
+  // const namaTamu = decodeURIComponent(
+  //   searchParams.get("kpd") || "Tamu Undangan"
+  // );
+  const namaTamu =
+    typeof window !== "undefined"
+      ? decodeURIComponent(
+          new URLSearchParams(window.location.search).get("kpd") ||
+            "Tamu Undangan"
+        )
+      : "Tamu Undangan";
 
   useEffect(() => {
     AOS.init({
