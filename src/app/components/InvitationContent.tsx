@@ -300,7 +300,7 @@ export default function InvitationContent() {
         <div className="flex flex-col items-center text-center">
           <p
             data-aos="zoom-in"
-            className="my-10 w-75 font-quicksand text-gray-500 text-xs"
+            className="my-10 w-75 font-quicksand text-gray-500 text-xs mx-auto"
           >
             Merupakan suat kehormatan dan kebahagiaan bagi kami sekeluarga,
             apabila Bapak/Ibu/Saudara/i berkenan hadir dan memberikan doa restu.
@@ -474,7 +474,7 @@ export default function InvitationContent() {
         <div className="flex flex-col items-center text-center">
           <p
             data-aos="fade-up"
-            className="text-gray-500 w-80 text-xs font-quicksand mt-10"
+            className="text-gray-500 w-80 text-xs font-quicksand mt-10 mx-auto"
           >
             Suatu Kebahagiaan dan Kehormatan bagi Kami, Apabila
             Bapak/Ibu/Saudara/i, Berkenan Hadir di Acara kami
