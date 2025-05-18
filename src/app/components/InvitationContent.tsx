@@ -297,11 +297,10 @@ export default function InvitationContent() {
           </a>
         </div>
 
-        <div className="text-center">
-          {" "}
+        <div className="flex flex-col items-center text-center">
           <p
             data-aos="zoom-in"
-            className="my-10 w-75 text-center font-quicksand text-gray-500 text-xs text-center"
+            className="my-10 w-75 font-quicksand text-gray-500 text-xs"
           >
             Merupakan suat kehormatan dan kebahagiaan bagi kami sekeluarga,
             apabila Bapak/Ibu/Saudara/i berkenan hadir dan memberikan doa restu.
@@ -472,10 +471,10 @@ export default function InvitationContent() {
             Salin
           </button>
         </div>
-        <div className="text-center items-center">
+        <div className="flex flex-col items-center text-center">
           <p
             data-aos="fade-up"
-            className="text-gray-500 w-80 text-center text-xs font-quicksand mt-10"
+            className="text-gray-500 w-80 text-xs font-quicksand mt-10"
           >
             Suatu Kebahagiaan dan Kehormatan bagi Kami, Apabila
             Bapak/Ibu/Saudara/i, Berkenan Hadir di Acara kami
