@@ -222,7 +222,7 @@ export default function InvitationContent() {
         </div>
         {/* Box resepsi: ditengah, naik ke atas */}
         <div
-          className="mx-auto w-80 -mt-32 z-10 relative bg-white place-items-center  rounded-lg py-5 shadow-xl px-6"
+          className="mx-auto w-80 -mt-32 z-10 relative bg-white place-items-center text-center items-center  rounded-lg py-5 shadow-xl px-6"
           style={{ backgroundImage: "url(/assets/images/bg.jpg)" }}
           data-aos="fade-up"
         >
@@ -260,7 +260,7 @@ export default function InvitationContent() {
         </div>
 
         <div
-          className="mx-auto w-80 my-5 relative bg-white place-items-center rounded-lg py-3 shadow-xl px-6"
+          className="mx-auto w-80 my-5 relative bg-white place-items-center text-center rounded-lg py-3 shadow-xl px-6"
           style={{ backgroundImage: "url(/assets/images/bg.jpg)" }}
           data-aos="fade-up"
         >
@@ -297,14 +297,17 @@ export default function InvitationContent() {
           </a>
         </div>
 
-        <p
-          data-aos="zoom-in"
-          className="my-10 w-75 text-center font-quicksand text-gray-500 text-xs text-center"
-        >
-          Merupakan suat kehormatan dan kebahagiaan bagi kami sekeluarga,
-          apabila Bapak/Ibu/Saudara/i berkenan hadir dan memberikan doa restu.
-          Atas kehadiran dan doa restunya, kami mengucapkan terima kasih.
-        </p>
+        <div className="text-center">
+          {" "}
+          <p
+            data-aos="zoom-in"
+            className="my-10 w-75 text-center font-quicksand text-gray-500 text-xs text-center"
+          >
+            Merupakan suat kehormatan dan kebahagiaan bagi kami sekeluarga,
+            apabila Bapak/Ibu/Saudara/i berkenan hadir dan memberikan doa restu.
+            Atas kehadiran dan doa restunya, kami mengucapkan terima kasih.
+          </p>
+        </div>
       </section>
 
       <section
@@ -469,7 +472,7 @@ export default function InvitationContent() {
             Salin
           </button>
         </div>
-        <div>
+        <div className="text-center items-center">
           <p
             data-aos="fade-up"
             className="text-gray-500 w-80 text-center text-xs font-quicksand mt-10"
