@@ -38,7 +38,7 @@ export default function CountdownTimer({ targetDate }: { targetDate: string }) {
   }, []);
 
   return (
-    <div className="flex justify-center gap-4 mt-6 font-quicksand ">
+    <div className="flex justify-center gap-4 mt-1 font-quicksand ">
       {[
         { label: "Hari", value: timeLeft.days },
         { label: "Jam", value: timeLeft.hours },

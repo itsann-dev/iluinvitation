@@ -3,11 +3,14 @@
 import Image from "next/image";
 
 type InvitationCoverProps = {
-  // guestName: string;
+  guestName: string;
   onOpen: () => void;
 };
 
-export default function InvitationCover({ onOpen }: InvitationCoverProps) {
+export default function InvitationCover({
+  guestName,
+  onOpen,
+}: InvitationCoverProps) {
   return (
     <div
       onClick={onOpen}
@@ -24,7 +27,6 @@ export default function InvitationCover({ onOpen }: InvitationCoverProps) {
         width={100}
         height={100}
         className="absolute top-0 left-0 w-40 scale-x-[-1] animate-float"
-        data-aos="fade-down-right"
       />
       <Image
         src="/assets/images/dp.png"
@@ -32,7 +34,6 @@ export default function InvitationCover({ onOpen }: InvitationCoverProps) {
         width={100}
         height={100}
         className="absolute top-0 right-0 w-40 animate-float"
-        data-aos="fade-down-left"
       />
       <Image
         src="/assets/images/dp.png"
@@ -40,7 +41,6 @@ export default function InvitationCover({ onOpen }: InvitationCoverProps) {
         width={100}
         height={100}
         className="absolute bottom-0 left-0 w-40 rotate-180 animate-float"
-        data-aos="fade-up-right"
       />
       <Image
         src="/assets/images/dp.png"
@@ -48,12 +48,11 @@ export default function InvitationCover({ onOpen }: InvitationCoverProps) {
         width={100}
         height={100}
         className="absolute bottom-0 right-0 w-40 scale-y-[-1] animate-float"
-        data-aos="fade-up-left"
       />
 
       {/* Konten undangan */}
       <div className="relative z-10 text-white place-items-center text-center px-6">
-        <h2 className="text-gray-900 font-quicksand" data-aos="fade-up">
+        <h2 className="mb-2 text-gray-900 font-quicksand" data-aos="fade-down">
           WE INVITE YOU
         </h2>
         <Image
@@ -65,25 +64,36 @@ export default function InvitationCover({ onOpen }: InvitationCoverProps) {
           data-aos="zoom-in"
         />
         <p
-          className="my-1 text-brown text-4xl font-great-vibes"
+          className="my-3 text-brown text-4xl font-great-vibes"
           data-aos="fade-up"
         >
           Firdaus & Ani
         </p>
         <p
-          className="mb-5 text-xs text-black font-quicksand"
+          className="mb-10 text-xs text-black font-quicksand"
           data-aos="fade-up"
         >
           Tanpa mengurangi rasa hormat, Kami mengundang Bapak/Ibu/Saudara/i
           untuk hadir di acara kami.
         </p>
-        <p className="text-sm mb-2 text-gray-900 font-quicksand font-semibold">
-          Kepada Yth.
+        <p
+          data-aos="zoom-in"
+          className="text-sm mb-1 text-brown font-quicksand font-semibold"
+        >
+          Kepada
         </p>
-        <h1 className="text-2xl font-bold mb-4">Annas</h1>
+        <h1
+          data-aos="zoom-in"
+          className="text-2xl text-gray-800 font-quicksand font-bold mb-4"
+        >
+          {guestName}
+        </h1>
 
         {/* Tombol tidak perlu onClick lagi, tapi tetap bisa ada */}
-        <button className="bg-brown text-xs px-2 py-2 rounded shadow-lg hover:bg-brown-hover transition">
+        <button
+          data-aos="fade-up"
+          className="bg-brown text-xs px-2 py-2 rounded shadow-lg hover:bg-brown-hover transition"
+        >
           Buka Undangan
         </button>
       </div>
